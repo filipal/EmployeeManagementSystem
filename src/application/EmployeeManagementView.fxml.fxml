@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="application.EmployeeManagementController">
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem fx:id="exportData" text="Export Data" />
+        </Menu>
+    </MenuBar>
+    <HBox alignment="CENTER" spacing="10">
+        <TextField fx:id="filterField" promptText="Filter..." />
+        <ComboBox fx:id="sortCriteria" promptText="Sort by...">
+            <items>
+
+            </items>
+        </ComboBox>
+        <Button fx:id="applyFilter" text="Apply Filter" />
+        <Button fx:id="clearFilter" text="Clear Filter" />    
+    </HBox>
+    <TableView fx:id="employeeTable" prefHeight="400.0" prefWidth="609.0">
+    </TableView>
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="addEmployee" text="Add Employee" />
+        <Label fx:id="avgSalary" text="Average Salary: " />
+        <Label fx:id="totalEmployees" text="Total Employees: " />
+    </HBox>    
+</VBox>
